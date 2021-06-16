@@ -1,5 +1,4 @@
 import datetime
-
 from flask import Flask, render_template,url_for
 from flask_sqlalchemy import SQLAlchemy
 
@@ -16,17 +15,9 @@ class Todo(db.Model):
     def __repr__(self):
         return '<Task %r>' % self.id
 
-@app.route("/")
-def init():
-    return "Weolcome to the index page"
+@app.route('/',methods=['POST','GET'])
+def index():
+    return render_template('index.html')
 
-
-@app.route("/hi/")
-def who():
-    return "Who are you?"
-
-@app.route("/hi/<username>")
-def greet(username):
-    return f"Hi there, {username}!"
-
-sqlalchemy.__version__
+if __name__=="__main__":
+    app.run(debug=True)
