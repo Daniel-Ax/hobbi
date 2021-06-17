@@ -1,9 +1,11 @@
 import datetime
+import os
 from flask import Flask, render_template,url_for
 from flask_sqlalchemy import SQLAlchemy
 
+file_path = os.path.abspath(os.getcwd())+"\database.db"
 app = Flask(__name__)
-app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:////tmp/test.db'
+app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///C:/Users/Dani/PycharmProjects/test.db'
 db = SQLAlchemy(app)
 
 class Todo(db.Model):
