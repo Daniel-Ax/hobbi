@@ -21,7 +21,7 @@ def index():
     db.create_all()
     if request.method == 'POST':
         task_content = request.form['content']
-        new_task = User(task_content)
+        new_task = User(content=task_content)
 
         try:
             db.session.add(new_task)
