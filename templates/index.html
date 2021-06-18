@@ -1,18 +1,18 @@
 {% extends 'base.html' %}
 
 {% block head %}
-<title>Task Master</title>
+<title>Table reservation</title>
 {% endblock %}
 
 {% block body %}
 <div class="content">
-    <h1 style="text-align: center">Task Master</h1>
+    <h1 style="text-align: center">Table reservation</h1>
     {% if tasks|length < 1 %}
-    <h4 style="text-align: center">There are no tasks. Create one below!</h4>
+    <h4 style="text-align: center">There are no reservations. Create one below!</h4>
     {% else %}
     <table>
         <tr>
-            <th>Task</th>
+            <th>Table</th>
             <th>Added</th>
             <th>Actions</th>
         </tr>
@@ -33,7 +33,7 @@
     <div class="form">
         <form action="/" method="POST">
             <input type="text" name="content" id="content">
-            <input type="submit" value="Add Task">
+            <input type="submit" value="Add New Reservation">
         </form>
     </div>
 </div>
