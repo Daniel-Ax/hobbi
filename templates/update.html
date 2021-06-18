@@ -4,7 +4,53 @@
 {% block head %}
 <title>Table Reservation</title>
 {% endblock %}
+<style>
+    h1 {text-align: center;}
+    p {text-align: center;}
+    div {text-align: center;}
 
+    body, html {
+    margin: 0;
+    font-family: sans-serif;
+    background-color: lightslategray;
+}
+
+.content {
+    text-align: center;
+    margin: 0 auto;
+    width: 400px;
+}
+
+table, td, th {
+    text-align: center;
+    border: 1px solid #aaa;
+}
+
+table {
+    text-align: center;
+    border-collapse: collapse;
+    width: 100%;
+}
+
+th {
+    text-align: center;
+    height: 30px;
+}
+
+td {
+    text-align: center;
+    padding: 5px;
+}
+
+.form {
+    text-align: center;
+    margin-top: 20px;
+}
+
+#content {
+    width: 70%;
+}
+</style>
 {% block body %}
 <div class="content">
     <h1 style="text-align: center">Update Reservation</h1>
